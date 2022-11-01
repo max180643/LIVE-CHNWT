@@ -6,8 +6,8 @@
   let page = ``;
 
   onMount(async () => {
-    const path = window.location.pathname;
-    page = path.substring(1).toLowerCase();
+    let url = new URL(window.location.href);
+    page = url.searchParams.get("p") ?? "";
   });
 </script>
 
