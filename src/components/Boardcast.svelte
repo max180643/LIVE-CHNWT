@@ -19,7 +19,7 @@
 
   const connectMqtt = () => {
     // connect to MQTT Broker
-    mqttClient = mqtt.connect("ws://broker.mqttdashboard.com:8000/mqtt", {
+    mqttClient = mqtt.connect("wss://broker.emqx.io:8084/mqtt", {
       clientId: `L1VE@CHNWT_${nanoid(10)}`,
     });
 
